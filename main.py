@@ -1,4 +1,4 @@
-# map, filer, zip, reduce
+# map, filer, zip, reduce, lambda
 from functools import reduce
 
 my_list = [1, 2, 3]
@@ -22,3 +22,4 @@ print(list(map(multipy, my_list)))  # map -> [2, 4, 6]
 print(list(filter(check_odd, my_list)))  # filter -> [1, 3]
 print(list(zip(my_list, second_list, third_list)))  # zip -> [(1, 10, 5), (2, 20, 4), (3, 30, 3)]
 print((reduce(accumulator, my_list, 0)))  # reduce -> 6
+print(list(map(lambda x: x * 2, my_list))) # lambda -> [2, 4, 6], its one time function
