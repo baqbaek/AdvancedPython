@@ -16,3 +16,17 @@ def dig_pow(n, p):
         return result / n
     else:
         return -1
+
+
+def rot13(message):
+    char = ''
+    for i in message:
+        if i.isalpha():
+            ascii_code = ord(i)
+            if i.isupper():
+                char += chr((ascii_code - 65 + 13) % 26 + 65)
+            else:
+                char += chr((ascii_code - 97 + 13) % 26 + 97)
+        else:
+            char += i
+    return char
